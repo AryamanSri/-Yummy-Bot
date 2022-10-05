@@ -4,7 +4,7 @@ import os
 import keep_alive
 
 
-client = commands.Bot(command_prefix=['$'],case_insensitive=True)
+client = commands.Bot(command_prefix=['$'])
 
 
 for filename in os.listdir('./Cogs'):
