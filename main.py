@@ -7,7 +7,7 @@ import keep_alive
 client = commands.Bot(command_prefix=['$'])
 
 
-for filename in os.listdir('./Cogs'):
+for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'Cogs.{filename[:-3]}')
 
@@ -58,4 +58,4 @@ class NewHelpName(commands.MinimalHelpCommand):
 client.help_command = NewHelpName()
 
 keep_alive.keep_alive()
-client.run('Token')
+client.run(os.environ["TOKEN"])
